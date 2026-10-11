@@ -81,4 +81,17 @@ public class Commande {
     public void setStatus(StatutCommande status) {
         this.status = status;
     }
+
+    @Override
+    public String toString() {
+        return "Commande{" +
+                "id=" + id +
+                ", nomClient='" + nomClient + '\'' +
+                ", product=" + product +
+                ", quantity=" + quantity +
+                ", dateCommande=" + dateCommande +
+                ", dateLivraison=" + dateLivraison +
+                ", status=" + status +
+                '}';
+    }
 }
