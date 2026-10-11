@@ -13,6 +13,12 @@ public class Main {
         HashMap<Long, Commande> storage = new HashMap<Long, Commande>();
         System.out.println("=========== Plan D'Actions =============");
 
+
+
+
+        //Exercice 1 — Comprendre une HashMap
+        //=====================================
+
         //create products;
         Product p1 = new Product(1,"ONI",1.70,90);
         Product p2 = new Product(2,"ONI",1.70,90);
@@ -27,10 +33,28 @@ public class Main {
         storage.put(1L,commande1);
         storage.put(2L,commande2);
 
-        //display the date
+        //display cle
+        storage.forEach((k,v) -> {
+            System.out.println(k);
+        });
+
+        //display values
+        storage.forEach((k,v) -> {
+            System.out.println(v);
+        });
+        //disply cle and values
         storage.forEach((k,v) -> {
             System.out.println(k + "->" + v);
         });
 
+        //7. Vérifier si une commande existe avec un identifiant donné.
+        for(Long id : storage.keySet()){
+            if(id == 1){
+                System.out.println(storage.get(id));
+            }
+        }
+
+        //Exercice 2 — Stream sur une HashMap
+        //===================================
     }
 }
